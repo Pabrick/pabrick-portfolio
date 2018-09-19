@@ -1,0 +1,61 @@
+@import '../../../styles/theme.sass'
+
+.header
+    background: $theme-bluegray-900
+    background: -moz-linear-gradient(top, $theme-bluegray-900 0%, $theme-bluegray-600 50%, $theme-bluegray-900 100%)
+    background: -webkit-linear-gradient(top, $theme-bluegray-900 0%,$theme-bluegray-600 50%,$theme-bluegray-900 100%)
+    background: linear-gradient(to bottom, $theme-bluegray-900 0%,$theme-bluegray-600 50%,$theme-bluegray-900 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$theme-bluegray-900', endColorstr='$theme-bluegray-900',GradientType=0 )
+
+    .wrapper
+        // background-color: rgba(255,255,255,.1)
+        margin: 0 auto
+        max-width: $app-max-width
+        padding: 20px 0
+        position: relative
+        text-align: center
+        +box-shadow(0,0,10px,0,rgba(0,0,0,.5))
+        .logo
+            border-radius: 50%
+            background-image: url('../../../assets/images/pab.png')
+            background-size: contain
+            background-repeat: no-repeat
+            height: 100px
+            margin: 0 auto
+            position: 
+            top: 100px
+            width: 100px
+        h1, h2 
+            color: $color-white
+            margin: 0 auto 0 auto
+            text-transform: uppercase
+            +text-shadow(0, 3px, 0, rgba(0,0,0,.75))
+        h1 
+            font-size: 20px
+            margin-top: -10px
+        h2 
+            font-size: 18px
+            margin-top: -4px
+        
+@media screen and (min-width: 1024px)
+    .header
+        background: $theme-bluegray-900
+        background: -moz-linear-gradient(top, $theme-bluegray-900 0%, $theme-bluegray-600 80%)
+        background: -webkit-linear-gradient(top, $theme-bluegray-900 0%,$theme-bluegray-600 80%)
+        background: linear-gradient(to bottom, $theme-bluegray-900 0%,$theme-bluegray-600 80%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$theme-bluegray-900', endColorstr='#7db9e8',GradientType=0 )
+
+        .wrapper
+            height: 35px
+ 
+            h1, h2 
+                margin-top: 0px
+                position: absolute
+            h1 
+                font-size: 30px
+                left: 20px
+                top: 20px
+            h2 
+                font-size: 28px
+                top: 22px
+                right: 20px
