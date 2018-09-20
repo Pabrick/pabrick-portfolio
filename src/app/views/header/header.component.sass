@@ -8,13 +8,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$theme-bluegray-900', endColorstr='$theme-bluegray-900',GradientType=0 )
 
     .wrapper
-        // background-color: rgba(255,255,255,.1)
-        margin: 0 auto
-        max-width: $app-max-width
+        @extend .wrapper
         padding: 20px 0
         position: relative
         text-align: center
-        +box-shadow(0,0,10px,0,rgba(0,0,0,.5))
         .logo
             border-radius: 50%
             background-image: url('../../../assets/images/pab.png')
@@ -26,18 +23,19 @@
             top: 100px
             width: 100px
         h1, h2 
-            color: $color-white
             margin: 0 auto 0 auto
             text-transform: uppercase
             +text-shadow(0, 3px, 0, rgba(0,0,0,.75))
         h1 
+            color: $theme-bluegray-050
             font-size: 20px
             margin-top: -10px
         h2 
+            color: $theme-bluegray-100
             font-size: 18px
             margin-top: -4px
         
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 768px)
     .header
         background: $theme-bluegray-900
         background: -moz-linear-gradient(top, $theme-bluegray-900 0%, $theme-bluegray-600 80%)
@@ -52,10 +50,20 @@
                 margin-top: 0px
                 position: absolute
             h1 
-                font-size: 30px
+                font-size: 24px
                 left: 20px
+                top: 24px
+            h2 
+                font-size: 22px
+                top: 26px
+                right: 20px
+
+@media screen and (min-width: 1024px)
+    .header
+        .wrapper
+            h1 
+                font-size: 30px
                 top: 20px
             h2 
                 font-size: 28px
                 top: 22px
-                right: 20px
