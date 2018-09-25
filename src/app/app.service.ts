@@ -1,21 +1,56 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+
+import { PortfolioSections, ITPortfolio } from './app.data';
+import { ITTool } from './views/tools/tools.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
 
-    public lang = 'eng';
-    public eng: Map<string, string>;
+    private languaje: string;
+    private portfolioTexts: PortfolioSections;
+    private portfolioTools: Array<ITTool>;
 
-    constructor () {
-        this.eng = new Map<string, string>();
-        this.eng.set('about', 'Technical Telecommunications Engineer with over 15 years of experience as Web Developer and 5 years as a Front-End Developer. Throughout my career I was able to access responsible positions where important decision-making as well as customer contact have been natural to me. Driven by my passion and hard work I have participated in different areas such as development, management, design and marketing, etc. and so I have been able to acquire a global knowledge of the projects and full understanding of the processes involved.');
+    constructor (private http: HttpClient) {
+        this.languaje = 'eng';
+
+        // this.portfolioTexts = this.getTextMap(this.languaje);
+        this.portfolioTexts = require(`../assets/data/${this.languaje}.json`)['sections'];
+        this.portfolioTools = require(`../assets/data/${this.languaje}.json`)['tools'];
+        console.log(this.portfolioTexts);
+        console.log(this.portfolioTools);
     }
 
-    public getText(text) {
-        return this[this.lang].get(text);
+    public getTetxs() {
+        return this.portfolioTexts;
+    }
 
+    public getTools() {
+        return this.portfolioTools;
+    }
+
+    public getTextSection(section) {
+        return this.portfolioTexts[section];
+    }
+
+    /* PRIVATE METHODS */
+    private getTextMap(lang) {
+        let portfolio;
+        this.getData(lang).subscribe(
+            (data: ITPortfolio) => {
+                portfolio = new PortfolioSections();
+                portfolio = data.sections;
+            }
+        );
+        return portfolio;
+    }
+
+    private getData(lang): Observable<any> {
+        return this.http.get<any>(`../assets/data/${lang}.json`);
     }
 
 }

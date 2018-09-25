@@ -1,3 +1,32 @@
-<section class="tools">
-  tools works!
+<section class="tools" aria-label="tools">
+
+  <div class="wrapper">
+
+    <h3>{{ tools.title }}</h3>
+    
+    <div class="tools-flex">
+
+        <article class="summary">
+          <div class="summary-text">{{ tools.text }}</div>
+        </article>
+
+        <article class="list">
+          <div class="list-web">
+            <span *ngFor="let tool of toolsWeb">{{ tool.name }}</span>
+          </div>
+          <div class="list-dev">
+            <span *ngFor="let tool of toolsDev">{{ tool.name }}</span>
+          </div>
+          <div class="list-design">
+              <span *ngFor="let tool of toolsDesign">{{ tool.name }}</span>
+          </div>
+          <div class="list-agile">
+              <span *ngFor="let tool of toolsAgile">{{ tool.name }}</span>
+          </div>
+        </article>
+
+      </div>
+
+  </div>
+
 </section>

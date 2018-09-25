@@ -1,0 +1,70 @@
+{
+    "sections": {
+        "about": {
+            "title": "About me",
+            "text": "Technical Telecommunications Engineer with over 15 years of experience as Web Developer and 5 years as a Front-End Developer. Throughout my career I was able to access responsible positions where important decision-making as well as customer contact have been natural to me. Driven by my passion and hard work I have participated in different areas such as development, management, design and marketing, etc. and so I have been able to acquire a global knowledge of the projects and full understanding of the processes involved."
+        },
+        "tools": {
+            "title": "Tools",
+            "text": "These are my current tools, some are everyday tools and others are a little old fashioned, but all then are useful."
+        }
+    },
+    "tools": [
+        { "name": "HTML5", "group": "web" },
+        { "name": "CSS3", "group": "web" },
+        { "name": "LESS", "group": "web" },
+        { "name": "SASS", "group": "web" },
+        { "name": "Bootstrap", "group": "web" },
+        { "name": "Wordpress", "group": "web" },
+
+        { "name": "JavaScript", "group": "dev" },
+        { "name": "TypeScript", "group": "dev" },
+        { "name": "ActionScript", "group": "dev" },
+        { "name": "Angular", "group": "dev" },
+        { "name": "AngularJS", "group": "dev" },
+        { "name": "Backbone", "group": "dev" },
+        { "name": "Underscore", "group": "dev" },
+        { "name": "Lodash", "group": "dev" },
+        { "name": "Cordova", "group": "dev" },
+        { "name": "Phonegap", "group": "dev" },
+        { "name": "jQuery", "group": "dev" },
+        { "name": "GSAP", "group": "dev" },
+        { "name": "PHP", "group": "dev" },
+        { "name": "MySQL", "group": "dev" },
+        { "name": "WebPack", "group": "dev" },
+        { "name": "Bower", "group": "dev" },
+        { "name": "Grunt", "group": "dev" },
+        { "name": "Gulp", "group": "dev" },
+        { "name": "Yarn", "group": "dev" },
+        { "name": "JSON", "group": "dev" },
+        { "name": "XML", "group": "dev" },
+        { "name": "Maven", "group": "dev" },
+        { "name": "Jenkins", "group": "dev" },
+        { "name": "Robotium", "group": "dev" },
+        { "name": "SVN", "group": "dev" },
+        { "name": "Git", "group": "dev" },
+        { "name": "BitBucket", "group": "dev" },
+        { "name": "Sourcetree", "group": "dev" },
+        { "name": "Sublime Text", "group": "dev" },
+        { "name": "Atom", "group": "dev" },
+        { "name": "Visual Studio Code", "group": "dev" },
+        { "name": "Eclipse", "group": "dev" },
+        { "name": "Construct 2", "group": "dev" },
+        { "name": "Android SDK", "group": "dev" },
+        { "name": "Facebook API", "group": "dev" },
+        { "name": "Twitter API", "group": "dev" },
+        { "name": "Google Maps API", "group": "dev" },
+        { "name": "Google Analytics API", "group": "dev" },
+
+        { "name": "Adobe Photoshop", "group": "design" },
+        { "name": "Adobe Illustrator", "group": "design" },
+        { "name": "Adobe Flash", "group": "design" },
+        { "name": "Freehand", "group": "design" },
+        { "name": "Animate Pro", "group": "design" },
+        { "name": "Zeplin", "group": "design" },
+
+        { "name": "Scrum", "group": "agile" },
+        { "name": "Kanban", "group": "agile" },
+        { "name": "Trello", "group": "agile" }
+    ]  
+}

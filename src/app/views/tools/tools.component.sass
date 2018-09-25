@@ -1,2 +1,74 @@
+@import '../../../assets/styles/theme.sass'
+
 .tools
-    background-color: #00F
+    background-color: $theme-bluegray-800
+    color: $theme-bluegray-050
+    +box-shadow(0, 5px, 10px, 0, rgba(0,0,0,.5), inset)
+
+    .wrapper
+        @extend .wrapper
+        display: block
+        padding: 20px
+
+        h3
+            margin: 0 0 10px 0
+            text-transform: uppercase
+
+        .tools-flex
+            display: flex
+            justify-content: space-between
+
+        article
+            width: 100%
+        
+        .summary
+            display: none
+            text-align: justify
+
+        .list-before
+            display: block
+            color: $theme-bluegray-100
+            margin-bottom: 4px
+            text-decoration: underline
+            text-transform: uppercase
+
+        .list
+            div
+                margin-bottom: 10px 
+
+                span
+                    cursor: pointer
+                    display: inline-block
+                    &:nth-child(odd)
+                        color: $theme-bluegray-200
+                    &:nth-child(even)
+                        color: $theme-bluegray-300
+                    &:hover
+                        color: $color-white
+                    &::after
+                        content: '/'
+                        margin: 0 4px
+
+            .list-web::before
+                @extend .list-before
+                content: 'web'
+
+            .list-dev::before
+                @extend .list-before
+                content: 'development'
+
+            .list-design::before
+                @extend .list-before
+                content: 'design'
+
+            .list-agile::before
+                @extend .list-before
+                content: 'Agile Methodologies'
+
+@media screen and (min-width: 768px)
+    .tools
+        .wrapper
+            article
+                // width: 48%
+            .summary
+                // display: inline-flex

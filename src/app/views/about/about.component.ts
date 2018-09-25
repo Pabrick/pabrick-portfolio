@@ -8,11 +8,12 @@ import { AppService } from '../../app.service';
 })
 export class AboutComponent implements OnInit {
 
-  public about: string;
-  constructor(private service: AppService) { }
+  public about;
+
+  constructor(private service: AppService) {}
 
   ngOnInit() {
-    this.about = this.service.getText('about');
+    this.about = this.service.getTetxs().about;
   }
 
 }
