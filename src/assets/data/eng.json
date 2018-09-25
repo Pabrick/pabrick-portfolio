@@ -7,6 +7,18 @@
         "tools": {
             "title": "Tools",
             "text": "These are my current tools, some are everyday tools and others are a little old fashioned, but all then are useful."
+        },
+        "experience": {
+            "title": "Work Experience",
+            "text": "Yas"
+        },
+        "projects": {
+            "title": "Side Projects",
+            "text": "Yas"
+        },
+        "education": {
+            "title": "Education",
+            "text": "Yas"
         }
     },
     "tools": [

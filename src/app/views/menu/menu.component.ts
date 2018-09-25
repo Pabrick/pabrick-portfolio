@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+@Output() currentSection: string;
+
+  public menu: Object;
+
+  constructor(private service: AppService) { }
 
   ngOnInit() {
+    this.currentSection = this.service.getSection();
+    this.menu = {
+      experience: this.service.getTetxs().experience.title,
+      projects: this.service.getTetxs().projects.title,
+      education: this.service.getTetxs().education.title
+    };
   }
 
 }

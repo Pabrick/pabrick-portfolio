@@ -1,3 +1,12 @@
-<nav class="menu">
-  menu works!
-</nav>
+<section class="menu" aria-label="menu">
+  
+  <div class="wrapper">
+
+    <nav class="menu-block">
+      <a class="menu-button" [ngClass]="(currentSection === 'experience' || currentSection === '/') ? 'selected' : ''" routerLink="experience">{{ menu.experience }}</a>
+      <a class="menu-button" [ngClass]="currentSection === 'projects' ? 'selected' : ''" routerLink="projects">{{ menu.projects }}</a>
+      <a class="menu-button" [ngClass]="currentSection === 'education' ? 'selected' : ''" routerLink="education">{{ menu.education }}</a>
+    </nav>
+  </div>
+
+</section>

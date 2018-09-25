@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-side-projects',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: AppService) { }
 
   ngOnInit() {
+    this.service.setSection('projects');
   }
 
 }

@@ -9,11 +9,12 @@ import { FooterComponent } from './views/footer/footer.component';
 import { AboutComponent } from './views/about/about.component';
 import { ToolsComponent } from './views/tools/tools.component';
 import { MenuComponent } from './views/menu/menu.component';
+
 import { WorkExperienceComponent } from './views/work-experience/work-experience.component';
 import { SideProjectsComponent } from './views/side-projects/side-projects.component';
+import { EducationComponent } from './views/education/education.component';
+
 import { TimelineComponent } from './components/timeline/timeline.component';
-
-
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TimelineComponent } from './components/timeline/timeline.component';
     MenuComponent,
     WorkExperienceComponent,
     SideProjectsComponent,
-    TimelineComponent
+    TimelineComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
