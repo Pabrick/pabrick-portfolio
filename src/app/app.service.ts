@@ -1,24 +1,24 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
 import { PortfolioSections, ITPortfolio } from './app.data';
 import { ITTool } from './views/tools/tools.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
 
-    private currentSection: string;
+    public section: string;
     private languaje: string;
     private portfolioTexts: PortfolioSections;
     private portfolioTools: Array<ITTool>;
 
     constructor (private http: HttpClient) {
         this.languaje = 'eng';
-        this.currentSection = 'experience';
+        // this.setSection();
 
         // this.portfolioTexts = this.getTextMap(this.languaje);
         this.portfolioTexts = require(`../assets/data/${this.languaje}.json`)['sections'];
@@ -28,11 +28,11 @@ export class AppService {
     }
 
     public getSection() {
-        return this.currentSection;
+        return this.section;
     }
 
-    public setSection(section) {
-        this.currentSection = section;
+    public setSection(sec: string) {
+        this.section = sec;
     }
 
     public getTetxs() {

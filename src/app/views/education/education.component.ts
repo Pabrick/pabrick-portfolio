@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
+import { Constants } from '../../app.consts';
 
 @Component({
   selector: 'app-education',
@@ -11,7 +12,7 @@ export class EducationComponent implements OnInit {
   constructor(private service: AppService) { }
 
   ngOnInit() {
-    this.service.setSection('education');
+    this.service.setSection(Constants.SECTIONS.EDUCATION);
   }
 
 }

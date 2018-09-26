@@ -1,12 +1,30 @@
 <section class="menu" aria-label="menu">
-  
   <div class="wrapper">
 
     <nav class="menu-block">
-      <a class="menu-button" [ngClass]="(currentSection === 'experience' || currentSection === '/') ? 'selected' : ''" routerLink="experience">{{ menu.experience }}</a>
-      <a class="menu-button" [ngClass]="currentSection === 'projects' ? 'selected' : ''" routerLink="projects">{{ menu.projects }}</a>
-      <a class="menu-button" [ngClass]="currentSection === 'education' ? 'selected' : ''" routerLink="education">{{ menu.education }}</a>
-    </nav>
-  </div>
 
+      <a class="menu-button"
+         routerLink="experience"
+         [ngClass]="service.getSection() === 'experience' ? 'selected' : ''"
+         (click)="onClick('experience')">
+            {{ menu.experience }}
+      </a>
+
+      <a class="menu-button"
+         routerLink="projects"
+         [ngClass]="service.getSection() === 'projects' ? 'selected' : ''"
+         (click)="onClick('projects')">
+            {{ menu.projects }}
+      </a>
+
+      <a class="menu-button"
+         routerLink="education"
+         [ngClass]="service.getSection() === 'education' ? 'selected' : ''"
+         (click)="onClick('education')">
+            {{ menu.education }}
+      </a>
+
+    </nav>
+
+  </div>
 </section>

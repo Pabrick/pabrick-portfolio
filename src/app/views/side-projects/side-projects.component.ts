@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
+import { Constants } from '../../app.consts';
 
 @Component({
   selector: 'app-side-projects',
@@ -11,7 +12,7 @@ export class SideProjectsComponent implements OnInit {
   constructor(private service: AppService) { }
 
   ngOnInit() {
-    this.service.setSection('projects');
+    this.service.setSection(Constants.SECTIONS.PROJECTS);
   }
 
 }
