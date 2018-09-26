@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
 import { Constants } from '../../app.consts';
+import { ITSection } from '../../app.data';
 
 @Component({
   selector: 'app-work-experience',
@@ -9,10 +10,15 @@ import { Constants } from '../../app.consts';
 })
 export class WorkExperienceComponent implements OnInit {
 
+  public experience: ITSection;
+  public timeline: Array<any>;
   constructor(private service: AppService) { }
 
   ngOnInit() {
     this.service.setSection(Constants.SECTIONS.EXPERIENCE);
+
+    this.experience = this.service.getTetxs()[Constants.SECTIONS.EXPERIENCE];
+    this.timeline = this.service.getExperience();
   }
 
 }

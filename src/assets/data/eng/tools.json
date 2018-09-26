@@ -1,26 +1,4 @@
 {
-    "sections": {
-        "about": {
-            "title": "About me",
-            "text": "Technical Telecommunications Engineer with over 15 years of experience as Web Developer and 5 years as a Front-End Developer. Throughout my career I was able to access responsible positions where important decision-making as well as customer contact have been natural to me. Driven by my passion and hard work I have participated in different areas such as development, management, design and marketing, etc. and so I have been able to acquire a global knowledge of the projects and full understanding of the processes involved."
-        },
-        "tools": {
-            "title": "Tools",
-            "text": "These are my current tools, some are everyday tools and others are a little old fashioned, but all then are useful."
-        },
-        "experience": {
-            "title": "Work Experience",
-            "text": "Yas"
-        },
-        "projects": {
-            "title": "Side Projects",
-            "text": "Yas"
-        },
-        "education": {
-            "title": "Education",
-            "text": "Yas"
-        }
-    },
     "tools": [
         { "name": "HTML5", "group": "web" },
         { "name": "CSS3", "group": "web" },

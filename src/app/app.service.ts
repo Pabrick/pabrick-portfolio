@@ -1,9 +1,9 @@
-import { Injectable, Input, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
 
-import { PortfolioSections, ITPortfolio } from './app.data';
+import { PortfolioSections } from './app.data';
 import { ITTool } from './views/tools/tools.model';
+import { Constants } from './app.consts';
 
 
 @Injectable({
@@ -11,23 +11,26 @@ import { ITTool } from './views/tools/tools.model';
 })
 export class AppService {
 
-    public section: string;
+    private section: string;
     private languaje: string;
-    private portfolioTexts: PortfolioSections;
-    private portfolioTools: Array<ITTool>;
+    private pfTexts: PortfolioSections;
+    private pfTools: Array<ITTool>;
+    private pfExperience: Array<any>;
+    private pfProjects: Array<any>;
+    private pfEducation: Array<any>;
 
-    constructor (private http: HttpClient) {
+    constructor () {
         this.languaje = 'eng';
-        // this.setSection();
 
-        // this.portfolioTexts = this.getTextMap(this.languaje);
-        this.portfolioTexts = require(`../assets/data/${this.languaje}.json`)['sections'];
-        this.portfolioTools = require(`../assets/data/${this.languaje}.json`)['tools'];
-        console.log(this.portfolioTexts);
-        console.log(this.portfolioTools);
+        this.pfTexts = require(`../assets/data/${this.languaje}/sections.json`);
+        this.pfTools = require(`../assets/data/${this.languaje}/tools.json`)[Constants.SECTIONS.TOOLS];
+        this.pfExperience = require(`../assets/data/${this.languaje}/experience.json`)[Constants.SECTIONS.EXPERIENCE];
+        // this.pfProjects = require(`../assets/data/${this.languaje}/projects.json`)[Constants.SECTIONS.PROJECTS];
+        // this.pfEducation = require(`../assets/data/${this.languaje}/education.json`)[Constants.SECTIONS.EDUCATION];
+        // this.pfTexts = this.getTextMap(this.languaje);
     }
 
-    public getSection() {
+    public getSection(): string {
         return this.section;
     }
 
@@ -36,24 +39,33 @@ export class AppService {
     }
 
     public getTetxs() {
-        return this.portfolioTexts;
+        return this.pfTexts;
     }
 
-    public getTools() {
-        return this.portfolioTools;
+    public getTools(): Array<ITTool> {
+        return this.pfTools;
     }
 
-    public getTextSection(section) {
-        return this.portfolioTexts[section];
+    public getExperience(): Array<any> {
+        return this.pfExperience;
+    }
+
+    public getProjects(): Array<any> {
+        return this.pfProjects;
+    }
+
+    public getEducation(): Array<any> {
+        return this.pfEducation;
     }
 
     /* PRIVATE METHODS */
-    private getTextMap(lang) {
+    /*
+    private getTextMap(lang): PortfolioSections {
         let portfolio;
         this.getData(lang).subscribe(
             (data: ITPortfolio) => {
                 portfolio = new PortfolioSections();
-                portfolio = data.sections;
+                portfolio = data;
             }
         );
         return portfolio;
@@ -62,5 +74,6 @@ export class AppService {
     private getData(lang): Observable<any> {
         return this.http.get<any>(`../assets/data/${lang}.json`);
     }
+    */
 
 }

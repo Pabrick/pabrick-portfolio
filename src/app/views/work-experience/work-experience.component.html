@@ -1,7 +1,9 @@
 <section class="work-experience" aria-label="work-experience">
-  
+
   <div class="wrapper">
-    work-experience works!
+
+    <h3>{{ experience.title }}</h3>
+    <timeline *ngFor="let work of timeline" [data]="work" [text]="experience"></timeline>
+
   </div>
-  
 </section>

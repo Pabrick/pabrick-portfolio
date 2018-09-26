@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
+import { ITSection } from '../../app.data';
 
 @Component({
   selector: 'app-about',
@@ -8,7 +9,7 @@ import { AppService } from '../../app.service';
 })
 export class AboutComponent implements OnInit {
 
-  public about;
+  public about: ITSection;
 
   constructor(private service: AppService) {}
 

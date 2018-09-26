@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
-import { Constants } from '../../app.consts';
 
 @Component({
   selector: 'app-menu',

@@ -1,17 +1,20 @@
-export interface ITLanguajeSection {
+import { ITTool } from './views/tools/tools.model';
+
+export interface ITSection {
     title: string;
-    text: string;
+    text?: string;
+    featured?: string;
 }
 
 export class PortfolioSections {
-    about: ITLanguajeSection;
-    tools: ITLanguajeSection;
-    experience: ITLanguajeSection;
-    projects: ITLanguajeSection;
-    education: ITLanguajeSection;
+    about: ITSection;
+    tools: ITSection;
+    experience: ITSection;
+    projects: ITSection;
+    education: ITSection;
 }
 
 export interface ITPortfolio {
     sections: PortfolioSections;
-    tools: any;
+    tools: Array<ITTool>;
 }

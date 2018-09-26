@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TimelineEvent } from './timeline.data';
+import { ITSection } from '../../app.data';
 
 @Component({
-  selector: 'app-timeline',
+  selector: 'timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.sass']
 })
 export class TimelineComponent implements OnInit {
+
+@Input() data: TimelineEvent;
+@Input() text: ITSection;
 
   constructor() { }
 

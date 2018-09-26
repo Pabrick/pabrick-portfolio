@@ -1,0 +1,56 @@
+@import '../../../assets/styles/theme.sass'
+
+.timeline
+    display: flex
+    .dates
+        flex-grow: 0
+        padding: 10px 10px 0 0
+        min-width: 76px
+        vertical-align: top
+        span 
+            color: $color-black
+            display: block
+            font-size: 14px
+            margin: 0
+            text-align: right
+
+    .content
+        background-color: $theme-bluegray-100
+        background-color: transparent
+        border-left: 4px solid $theme-bluegray-900
+        flex-grow: 1
+
+        .head
+            background-color: $theme-bluegray-800
+            padding: 8px 10px 12px 10px
+            span 
+                display: block
+                font-size: 16px
+                &:nth-child(1)
+                    font-size: 18px
+                    text-transform: uppercase
+
+        .body
+            color: $theme-bluegray-900
+            padding: 4px 0 20px 0
+            span 
+                color: $color-black
+                font-weight: bold
+                padding: 0 10px
+            p 
+                color: $theme-bluegray-800
+                margin: 0
+                padding: 0 10px
+
+            .featured-projects
+                margin-top: 20px
+                .featured-projects-title
+                    background-color: $theme-bluegray-700
+                    color: $theme-bluegray-050
+                    font-size: 17px
+                    margin-bottom: 10px
+                    padding: 6px 10px 10px 10px
+
+                .project
+                    margin: 10px 0
+

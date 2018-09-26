@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
 import { Constants } from '../../app.consts';
 import { ITTool } from './tools.model';
+import { ITSection } from '../../app.data';
 
 @Component({
   selector: 'app-tools',
@@ -10,7 +11,7 @@ import { ITTool } from './tools.model';
 })
 export class ToolsComponent implements OnInit {
 
-  public tools;
+  public tools: ITSection;
 
   public toolsWeb: ITTool[];
   public toolsDev: ITTool[];
@@ -20,7 +21,7 @@ export class ToolsComponent implements OnInit {
   constructor(private service: AppService) {}
 
   ngOnInit() {
-    this.tools = this.service.getTetxs().tools;
+    this.tools = this.service.getTetxs()[Constants.SECTIONS.TOOLS];
 
     this.toolsWeb = this.service.getTools().filter(tool => tool.group === Constants.TOOLS.WEB);
     this.toolsDev = this.service.getTools().filter(tool => tool.group === Constants.TOOLS.DEVELOP);
