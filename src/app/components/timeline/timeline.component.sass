@@ -33,16 +33,15 @@
         .body
             color: $theme-bluegray-900
             padding: 4px 0 20px 0
-            span 
-                color: $color-black
-                font-weight: bold
-                left: 10px
-                padding: 0
-                position: relative
-            p 
-                color: $theme-bluegray-800
-                margin: 0
+
+            .occupation
                 padding: 0 10px
+                span 
+                    color: $color-black
+                    font-weight: bold
+                p 
+                    color: $theme-bluegray-800
+                    margin: 0
 
             .featured-projects
                 margin-top: 20px
@@ -55,4 +54,5 @@
 
                 .project
                     margin: 10px 0
+                    @extend .occupation
 
