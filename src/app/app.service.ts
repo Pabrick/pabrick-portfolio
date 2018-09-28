@@ -12,7 +12,7 @@ import { Constants } from './app.consts';
 export class AppService {
 
     private section: string;
-    private languaje: string;
+    private language: string;
     private pfTexts: PortfolioSections;
     private pfTools: Array<ITTool>;
     private pfExperience: Array<any>;
@@ -20,18 +20,18 @@ export class AppService {
     private pfEducation: Map<string, Array<any>>;
 
     constructor () {
-        this.languaje = 'eng';
+        this.language = 'eng';
 
-        this.pfTexts = require(`../assets/data/${this.languaje}/sections.json`);
-        this.pfTools = require(`../assets/data/${this.languaje}/tools.json`)[Constants.SECTIONS.TOOLS];
-        this.pfExperience = require(`../assets/data/${this.languaje}/experience.json`)[Constants.SECTIONS.EXPERIENCE];
-        this.pfProjects = require(`../assets/data/${this.languaje}/projects.json`)[Constants.SECTIONS.PROJECTS];
-        this.pfEducation = require(`../assets/data/${this.languaje}/education.json`)[Constants.SECTIONS.EDUCATION];
+        this.pfTexts = require(`../assets/data/${this.language}/sections.json`);
+        this.pfTools = require(`../assets/data/${this.language}/tools.json`)[Constants.SECTIONS.TOOLS];
+        this.pfExperience = require(`../assets/data/${this.language}/experience.json`)[Constants.SECTIONS.EXPERIENCE];
+        this.pfProjects = require(`../assets/data/${this.language}/projects.json`)[Constants.SECTIONS.PROJECTS];
+        this.pfEducation = require(`../assets/data/${this.language}/education.json`)[Constants.SECTIONS.EDUCATION];
 
         this.pfEducation = new Map<string, Array<any>>();
-        this.pfEducation.set(Constants.SECTIONS.EDUCATION , require(`../assets/data/${this.languaje}/education.json`)[Constants.SECTIONS.EDUCATION]);
-        this.pfEducation.set(Constants.SECTIONS.LANGUAJES , require(`../assets/data/${this.languaje}/education.json`)[Constants.SECTIONS.LANGUAJES]);
-        // this.pfTexts = this.getTextMap(this.languaje);
+        this.pfEducation.set(Constants.SECTIONS.EDUCATION , require(`../assets/data/${this.language}/education.json`)[Constants.SECTIONS.EDUCATION]);
+        this.pfEducation.set(Constants.SECTIONS.LANGUAGES , require(`../assets/data/${this.language}/education.json`)[Constants.SECTIONS.LANGUAGES]);
+        // this.pfTexts = this.getTextMap(this.language);
     }
 
     public getSection(): string {

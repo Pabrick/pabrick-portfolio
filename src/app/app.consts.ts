@@ -5,7 +5,7 @@ export class Constants {
         EXPERIENCE: 'experience',
         PROJECTS: 'projects',
         EDUCATION: 'education',
-        LANGUAJES: 'languajes'
+        LANGUAGES: 'languages'
     };
     public static TOOLS = {
         WEB: 'web',

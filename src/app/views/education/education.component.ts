@@ -12,7 +12,7 @@ export class EducationComponent implements OnInit {
 
   public section: ITSection;
   public studies: Array<any>;
-  public languajes: Array<any>;
+  public languages: Array<any>;
   private education: Map<string, Array<any>>;
 
   constructor(private service: AppService) { }
@@ -23,8 +23,7 @@ export class EducationComponent implements OnInit {
     this.section = this.service.getTetxs()[Constants.SECTIONS.EDUCATION];
     this.education = this.service.getEducation();
     this.studies = this.education.get(Constants.SECTIONS.EDUCATION);
-    this.languajes = this.education.get(Constants.SECTIONS.LANGUAJES);
-    console.log(this.education);
+    this.languages = this.education.get(Constants.SECTIONS.LANGUAGES);
   }
 
 }
