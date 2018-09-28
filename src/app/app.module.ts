@@ -15,6 +15,7 @@ import { SideProjectsComponent } from './views/side-projects/side-projects.compo
 import { EducationComponent } from './views/education/education.component';
 
 import { TimelineComponent } from './components/timeline/timeline.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}], // TODO PathLocationStrategy
   bootstrap: [AppComponent]
 })
 export class AppModule { }

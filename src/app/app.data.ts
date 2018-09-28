@@ -3,7 +3,7 @@ import { ITTool } from './views/tools/tools.model';
 export interface ITSection {
     title: string;
     text?: string;
-    featured?: string;
+    subsection?: string;
 }
 
 export class PortfolioSections {

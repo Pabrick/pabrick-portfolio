@@ -10,4 +10,45 @@
         display: block
         padding: 20px
 
-        height: 500px
+        h3 
+            color: $color-black
+            margin: 0 0 10px 0
+            text-transform: uppercase
+
+        .education-block,
+        .languajes-block
+            margin-bottom: 30px
+
+        .study
+            color: $theme-bluegray-900
+            margin: 4px 0 12px 0
+            span 
+                display: block
+            .degree
+                font-size: 18px
+            .place
+                font-size: 16px
+
+        .languajes-block
+            display: block
+
+            .languaje
+                color: $theme-bluegray-900
+                text-align: center
+
+                .languaje-name
+                    font-size: 18px
+                    font-weight: bold
+
+                .languaje-level
+                    font-size: 16px
+                    &::before
+                        content: '-'
+                        margin: 0 4px
+
+@media screen and (min-width: 768px)
+    .education
+        .wrapper
+            .languajes-block
+                display: flex
+                justify-content: space-around

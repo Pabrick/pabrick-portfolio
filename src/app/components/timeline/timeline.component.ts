@@ -10,7 +10,7 @@ import { ITSection } from '../../app.data';
 export class TimelineComponent implements OnInit {
 
 @Input() data: TimelineEvent;
-@Input() text: ITSection;
+@Input() text?: ITSection;
 
   constructor() { }
 

@@ -9,12 +9,13 @@
     },
     "experience": {
         "title": "Work Experience",
-        "featured": "Featured Projects"
+        "subsection": "Featured Projects"
     },
     "projects": {
         "title": "Side Projects"
     },
     "education": {
-        "title": "Education"
+        "title": "Education",
+        "subsection": "Languajes"
     }
 }

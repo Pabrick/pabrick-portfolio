@@ -5,6 +5,7 @@ export class TimelineEvent {
     dateTo: string;
     position?: string;
     description: string;
+    link?: string;
     featured?: Array<ITFeaturedProject>;
 }
 

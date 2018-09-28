@@ -1,7 +1,28 @@
 <section class="education" aria-label="education">
-  
+
   <div class="wrapper">
-    education works!
+
+    <h3>{{ section.title }}</h3>
+
+    <div class="education-block">
+
+      <div *ngFor="let edu of studies" class="study">
+        <span class="degree">{{edu.degree}}</span>
+        <span class="place">{{edu.place}}</span>
+      </div>
+
+    </div>
+
+    <h3>{{ section.subsection }}</h3>
+
+    <div class="languajes-block">
+
+      <div *ngFor="let lang of languajes" class="languaje">
+        <span class="languaje-name">{{lang.name}}</span>
+        <span class="languaje-level">{{lang.level}}</span>
+      </div>
+
+    </div>
+
   </div>
-  
 </section>

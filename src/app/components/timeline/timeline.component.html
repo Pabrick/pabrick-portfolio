@@ -17,10 +17,11 @@
       <div class="occupation">
         <span>{{data.position}}</span>
         <p>{{data.description}}</p>
+        <a href="{{data.link}}" target="_blank">{{data.link}}</a>
       </div>
 
       <div class="featured-projects" *ngIf="data.featured">
-        <div class="featured-projects-title">{{text.featured}}</div>
+        <div class="featured-projects-title">{{text.subsection}}</div>
         <div *ngFor="let proj of data.featured" class="project">
           <span>{{proj.name}}</span>
           <p>{{proj.description}}</p>

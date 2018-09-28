@@ -1,0 +1,25 @@
+{
+    "projects": [
+        {
+            "name": "Roger.JS",
+            "type": "Animation library",
+            "dateTo": "Jul. 2018",
+            "description": "A personal project made entirely in ECMAScript 6 based in frame by frame animations and spritesheets.",
+            "link": "https://github.com/Pabrick/roger.js"
+        },
+        {
+            "name": "QBOX",
+            "type": "Hybrid HTML5 App",
+            "dateFrom": "Jun. 2014",
+            "dateTo": "May. 2014",
+            "description": "App based on the customization of a cube with 3D animations."
+        },
+        {
+            "name": "YOSSA.FI",
+            "type": "Native Android App",
+            "dateFrom": "Dec. 2012",
+            "dateTo": "Sept. 2012",
+            "description": "Social network based on geolocalization and rating of pubs in Helsinki for Sankarimedia Oy."
+        }
+    ]  
+}

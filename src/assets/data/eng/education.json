@@ -1,0 +1,26 @@
+{
+    "education": [
+        {
+            "degree": "Bachelor of Science in Telecommunications Engineering, major Sound and Image",
+            "place": "Alfonso X El Sabio University (Madrid - Spain)"
+        },
+        {
+            "degree": "Certificate of Higher Education on Industrial Electronics",
+            "place": "Santo Domingo Savio High School (Madrid - Spain)"
+        }
+    ],
+    "languajes": [
+        {
+            "name": "Spanish",
+            "level": "Native"
+        }, 
+        {
+            "name": "English",
+            "level": "Fluent"
+        },
+        {
+            "name": "Catalan",
+            "level": "Fluent"
+        }
+    ]
+}

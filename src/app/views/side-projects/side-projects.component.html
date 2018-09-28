@@ -1,7 +1,9 @@
 <section class="side-projects" aria-label="side-projects">
-  
+
   <div class="wrapper">
-    side-projects works!
+
+    <h3>{{ section.title }}</h3>
+    <timeline *ngFor="let project of timeline" [data]="project"></timeline>
+
   </div>
-  
 </section>
