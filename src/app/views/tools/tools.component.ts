@@ -11,22 +11,18 @@ import { ITSection } from '../../app.data';
 })
 export class ToolsComponent implements OnInit {
 
-  public tools: ITSection;
-
   public toolsWeb: ITTool[];
   public toolsDev: ITTool[];
   public toolsDesign: ITTool[];
   public toolsAgile: ITTool[];
 
-  constructor(private service: AppService) {}
+  constructor(public service: AppService) {}
 
   ngOnInit() {
-    this.tools = this.service.getTetxs()[Constants.SECTIONS.TOOLS];
-
-    this.toolsWeb = this.service.getTools().filter(tool => tool.group === Constants.TOOLS.WEB);
-    this.toolsDev = this.service.getTools().filter(tool => tool.group === Constants.TOOLS.DEVELOP);
-    this.toolsDesign = this.service.getTools().filter(tool => tool.group === Constants.TOOLS.DESIGN);
-    this.toolsAgile = this.service.getTools().filter(tool => tool.group === Constants.TOOLS.AGILE);
+    this.toolsWeb = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.WEB);
+    this.toolsDev = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.DEVELOP);
+    this.toolsDesign = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.DESIGN);
+    this.toolsAgile = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.AGILE);
   }
 
 }

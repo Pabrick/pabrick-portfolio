@@ -1,14 +1,21 @@
 <footer class="footer">
   <div class="wrapper">
 
-    <h4>a.k.a. PABRICK:</h4>
+    <div class="left">
+      <button class="btn-eng" (click)="changeLanguage('eng')"></button>
+      <button class="btn-spa" (click)="changeLanguage('spa')"></button>
+    </div>
+
+    <div class="right">
+        <h4>a.k.a. PABRICK:</h4>
     
-    <nav class="social">
-      <i class="fas fa-envelope" (click)="navigateTo('email')"></i>
-      <i class="fab fa-twitter" (click)="navigateTo('twitter')"></i>
-      <i class="fab fa-github" (click)="navigateTo('github')"></i>
-      <i class="fab fa-linkedin" (click)="navigateTo('linkedin')"></i>
-    </nav>
+        <nav class="social">
+          <i class="fas fa-envelope" (click)="navigateTo('email')"></i>
+          <i class="fab fa-twitter" (click)="navigateTo('twitter')"></i>
+          <i class="fab fa-github" (click)="navigateTo('github')"></i>
+          <i class="fab fa-linkedin" (click)="navigateTo('linkedin')"></i>
+        </nav>
+    </div>
 
   </div>
   

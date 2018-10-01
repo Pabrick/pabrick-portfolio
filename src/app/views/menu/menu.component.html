@@ -7,21 +7,21 @@
          routerLink="experience"
          [ngClass]="service.getSection() === 'experience' ? 'selected' : ''"
          (click)="onClick('experience')">
-            {{ menu.experience }}
+            {{ service.pfTexts.experience.title }}
       </a>
 
       <a class="menu-button"
          routerLink="projects"
          [ngClass]="service.getSection() === 'projects' ? 'selected' : ''"
          (click)="onClick('projects')">
-            {{ menu.projects }}
+            {{ service.pfTexts.projects.title }}
       </a>
 
       <a class="menu-button"
          routerLink="education"
          [ngClass]="service.getSection() === 'education' ? 'selected' : ''"
          (click)="onClick('education')">
-            {{ menu.education }}
+            {{ service.pfTexts.education.title }}
       </a>
 
     </nav>

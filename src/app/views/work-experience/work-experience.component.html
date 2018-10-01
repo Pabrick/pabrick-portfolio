@@ -2,8 +2,8 @@
 
   <div class="wrapper">
 
-    <h3>{{ section.title }}</h3>
-    <timeline *ngFor="let work of timeline" [data]="work" [text]="section"></timeline>
+    <h3>{{ service.pfTexts.experience.title }}</h3>
+    <timeline *ngFor="let work of service.pfExperience" [data]="work" [text]="service.pfTexts.experience"></timeline>
 
   </div>
 </section>

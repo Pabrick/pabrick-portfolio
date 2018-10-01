@@ -8,26 +8,53 @@
 
     .wrapper
         @extend .wrapper
-        display: block
-        padding: 12px 0
-        text-align: right
+        display: flex
+        justify-content: space-between
+        padding: 9px 0
+            
+        .left
+            margin-left: 20px
+            height: 32px
 
-        h4
-            color: $theme-bluegray-100
-            display: inline-block
-            margin: 0
-            position: relative 
-            top: -4px
-
-        .social 
-            display: inline-block
-            padding: 0 20px 0 10px
-            i 
-                color: $theme-bluegray-100
+            .btn-lang
+                background-size: contain
+                border: 2px solid $theme-bluegray-900
                 cursor: pointer
-                font-size: 26px
-                margin-left: 8px
+                height: 32px
+                margin: 0 6px 0 0
+                padding: 0
+                width: 32px
                 &:hover
-                    color: $color-white
+                   border: 2px solid $color-white
+
+            .btn-eng
+                @extend .btn-lang
+                background-image: url('../../../assets/images/flag_eng.png')
+
+            .btn-spa
+                @extend .btn-lang
+                background-image: url('../../../assets/images/flag_spa.png')
+
+        .right
+            padding: 3px 0
+            text-align: right
+
+            h4
+                color: $theme-bluegray-100
+                display: inline-block
+                margin: 0
+                position: relative 
+                top: -4px
+
+            .social 
+                display: inline-block
+                padding: 0 20px 0 10px
+                i 
+                    color: $theme-bluegray-100
+                    cursor: pointer
+                    font-size: 26px
+                    margin-left: 8px
+                    &:hover
+                        color: $color-white
 
     

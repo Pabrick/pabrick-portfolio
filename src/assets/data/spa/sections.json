@@ -1,0 +1,21 @@
+{
+    "about": {
+        "title": "Sobre mi",
+        "text": "Ingeniero técnico de Telecomunicaciones con más de 15 años en el Diseño y Programación Web y más de 5 en Desarrollo Front-End. A través de mi carrera he tenido acceso a distintos cargos de responsabilidad donde la toma de decisiones y el contacto con clientes se han convertido en algo natural para mi. Llevado por mi pasión y constancia he participado en las distintas áreas de, desarrollo, gestión, diseño, marketing, etc. adquiriendo un conocimiento global de los proyectos y un entendimiento de los procesos involucrados."
+    },
+    "tools": {
+        "title": "Herramientas",
+        "text": "These are my current tools, some are everyday tools and others are a little old fashioned, but all then are useful."
+    },
+    "experience": {
+        "title": "Experiencia Laboral",
+        "subsection": "Proyectos Destacados"
+    },
+    "projects": {
+        "title": "Projectos paralelos"
+    },
+    "education": {
+        "title": "Educación",
+        "subsection": "Idiomas"
+    }
+}

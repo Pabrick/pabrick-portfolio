@@ -2,8 +2,8 @@
 
   <div class="wrapper">
 
-    <h3>{{ section.title }}</h3>
-    <timeline *ngFor="let project of timeline" [data]="project"></timeline>
+    <h3>{{ service.pfTexts.projects.title }}</h3>
+    <timeline *ngFor="let project of service.pfProjects" [data]="project"></timeline>
 
   </div>
 </section>

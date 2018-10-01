@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,7 @@ export class FooterComponent implements OnInit {
 
   private map: Map<string, string>;
 
-  constructor() { }
+  constructor(private service: AppService) { }
 
   ngOnInit() {
     this.map = new Map<string, string>();
@@ -21,6 +22,10 @@ export class FooterComponent implements OnInit {
 
   navigateTo(key) {
     window.open(this.map.get(key), '_blank');
+  }
+
+  changeLanguage(lang) {
+    this.service.setLanguage(lang);
   }
 
 }

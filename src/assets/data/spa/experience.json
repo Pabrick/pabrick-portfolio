@@ -1,0 +1,54 @@
+{
+    "experience": [
+        {
+            "name": "BSD Enterprise",
+            "type": "Technological Consultancy",
+            "dateFrom": "Aug. 2017",
+            "dateTo": "Present Day",
+            "position": "Front-End Developer / Technical Leader",
+            "description": "AngularJS and Angular project development for banking area.",
+            "featured": [
+                {
+                    "name": "Banco Santander NuevaWebEmpresas:",
+                    "description": "My task is to lead a small team (from 4 to 10 people) and develop the web portal as well as migrate from AngularJS (1.5) to Angular 5, changing its functionality and ‘look & feel’, using full mobile first responsive designs. As Team Leader I have direct communication with the Product Owner to solve any problem that appears."
+                },
+                {
+                    "name": "Banco Santander SAM:",
+                    "description": "As a member of a small team our job was to develop a bank functionality in AngularJS (1.5) to integrate in the client web portal. My duty was to prevent Wordpress to modify our app styles because we were integrating inside an iFrame."
+                }
+            ]
+        },
+        {
+            "name": "Crazyvity",
+            "type": "Digital Production Agency",
+            "dateFrom": "Aug. 2017",
+            "dateTo": "Oct. 2013",
+            "position": "Front-End Developer / Technical Leader",
+            "description": "evelopment of apps, websites, landing pages and advergaming, as well as management of the assigned team. Technical analysis and assessment of the projects according to the clients needs.",
+            "featured": [
+                {
+                    "name": "Rich Media Animation Library (Crazyvity):",
+                    "description": "The designers asked for an easier way to make rich media ads campaigns without programming. Besides rich media platforms as DoubleClick and Sizmek have a 100Kbs. limitation per ad, so I made a Vanilla JS library; that anyone can easily use to make animated interactive ads, automatizing their work even if they didn’t know anything about coding."
+                },
+                {
+                    "name": "Fan del Mes (Travel Club):",
+                    "description": "Our client Travel Club asked for a way to measure their Facebook user interactions. I developed a Javascript app using Vanilla JS and jQuery for their Facebook profile using its API. A cron job made in PHP to retrieve the feeds of all the users that interacted with the app using the Facebook API. I also create an admin panel for the client to easily use the application."
+                }
+            ]
+        },
+        {
+            "name": "Monkey-Toons",
+            "type": "Digital Production Studio",
+            "dateFrom": "Sept. 2008",
+            "dateTo": "Aug. 2013",
+            "position": "Front-End Developer / Technical Leader",
+            "description": "Development of apps, websites, landing pages and advergaming. Technical assessment of the projects according to the clients needs.",
+            "featured": [
+                {
+                    "name": "Custom Christmas Platform (Christmas Interactivos):",
+                    "description": "We created a web platform in Javascript for users can customized our xmas templates and sending them to their clients."
+                }
+            ]
+        }
+    ]  
+}

@@ -11,27 +11,30 @@ import { Constants } from './app.consts';
 })
 export class AppService {
 
-    private section: string;
-    private language: string;
-    private pfTexts: PortfolioSections;
-    private pfTools: Array<ITTool>;
-    private pfExperience: Array<any>;
-    private pfProjects: Array<any>;
-    private pfEducation: Map<string, Array<any>>;
+    public section: string;
+    public pfTexts: PortfolioSections;
+    public pfTools: Array<ITTool>;
+    public pfExperience: Array<any>;
+    public pfProjects: Array<any>;
+    public pfEducation: Map<string, Array<any>>;
+
 
     constructor () {
-        this.language = 'eng';
 
-        this.pfTexts = require(`../assets/data/${this.language}/sections.json`);
-        this.pfTools = require(`../assets/data/${this.language}/tools.json`)[Constants.SECTIONS.TOOLS];
-        this.pfExperience = require(`../assets/data/${this.language}/experience.json`)[Constants.SECTIONS.EXPERIENCE];
-        this.pfProjects = require(`../assets/data/${this.language}/projects.json`)[Constants.SECTIONS.PROJECTS];
-        this.pfEducation = require(`../assets/data/${this.language}/education.json`)[Constants.SECTIONS.EDUCATION];
+        this.setLanguage('eng');
+        // this.pfTexts = this.getTextMap(this.language);
+    }
+
+    public setLanguage(lang) {
+        this.pfTexts = require(`../assets/data/${lang}/sections.json`);
+        this.pfTools = require(`../assets/data/${lang}/tools.json`)[Constants.SECTIONS.TOOLS];
+        this.pfExperience = require(`../assets/data/${lang}/experience.json`)[Constants.SECTIONS.EXPERIENCE];
+        this.pfProjects = require(`../assets/data/${lang}/projects.json`)[Constants.SECTIONS.PROJECTS];
+        this.pfEducation = require(`../assets/data/${lang}/education.json`)[Constants.SECTIONS.EDUCATION];
 
         this.pfEducation = new Map<string, Array<any>>();
-        this.pfEducation.set(Constants.SECTIONS.EDUCATION , require(`../assets/data/${this.language}/education.json`)[Constants.SECTIONS.EDUCATION]);
-        this.pfEducation.set(Constants.SECTIONS.LANGUAGES , require(`../assets/data/${this.language}/education.json`)[Constants.SECTIONS.LANGUAGES]);
-        // this.pfTexts = this.getTextMap(this.language);
+        this.pfEducation.set(Constants.SECTIONS.EDUCATION , require(`../assets/data/${lang}/education.json`)[Constants.SECTIONS.EDUCATION]);
+        this.pfEducation.set(Constants.SECTIONS.LANGUAGES , require(`../assets/data/${lang}/education.json`)[Constants.SECTIONS.LANGUAGES]);
     }
 
     public getSection(): string {
@@ -40,26 +43,6 @@ export class AppService {
 
     public setSection(sec: string) {
         this.section = sec;
-    }
-
-    public getTetxs() {
-        return this.pfTexts;
-    }
-
-    public getTools(): Array<ITTool> {
-        return this.pfTools;
-    }
-
-    public getExperience(): Array<any> {
-        return this.pfExperience;
-    }
-
-    public getProjects(): Array<any> {
-        return this.pfProjects;
-    }
-
-    public getEducation(): Map<string, Array<any>> {
-        return this.pfEducation;
     }
 
     /* PRIVATE METHODS */

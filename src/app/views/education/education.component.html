@@ -2,22 +2,22 @@
 
   <div class="wrapper">
 
-    <h3>{{ section.title }}</h3>
+    <h3>{{ service.pfTexts.education.title }}</h3>
 
     <div class="education-block">
 
-      <div *ngFor="let edu of studies" class="study">
+      <div *ngFor="let edu of service.pfEducation.get('education')" class="study">
         <span class="degree">{{edu.degree}}</span>
         <span class="place">{{edu.place}}</span>
       </div>
 
     </div>
 
-    <h3>{{ section.subsection }}</h3>
+    <h3>{{ service.pfTexts.education.subsection }}</h3>
 
     <div class="languages-block">
 
-      <div *ngFor="let lang of languages" class="language">
+      <div *ngFor="let lang of service.pfEducation.get('languages')" class="language">
         <span class="language-name">{{lang.name}}</span>
         <span class="language-level">{{lang.level}}</span>
       </div>

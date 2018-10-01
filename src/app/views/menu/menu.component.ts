@@ -8,16 +8,9 @@ import { AppService } from '../../app.service';
 })
 export class MenuComponent implements OnInit {
 
-  public menu: Object;
-
-  constructor(private service: AppService) {}
+  constructor(public service: AppService) {}
 
   ngOnInit() {
-    this.menu = {
-      experience: this.service.getTetxs().experience.title,
-      projects: this.service.getTetxs().projects.title,
-      education: this.service.getTetxs().education.title
-    };
   }
 
   public onClick(sec) {

@@ -1,0 +1,26 @@
+{
+    "education": [
+        {
+            "degree": "Ingeniero Técnico en Telecomunicaciones especialidad en Sonido e Imagen",
+            "place": "Universidad Alfonso X El Sabio (Madrid - Spain)"
+        },
+        {
+            "degree": "Técnico Especialista en Electrónica Industrial",
+            "place": "Colegio Santo Domingo Savio (Madrid - Spain)"
+        }
+    ],
+    "languages": [
+        {
+            "name": "Español",
+            "level": "Nativo"
+        }, 
+        {
+            "name": "Inglés",
+            "level": "Fluido"
+        },
+        {
+            "name": "Catalán",
+            "level": "Fluido"
+        }
+    ]
+}
