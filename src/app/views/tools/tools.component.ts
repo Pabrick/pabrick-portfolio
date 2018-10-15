@@ -19,10 +19,12 @@ export class ToolsComponent implements OnInit {
   constructor(public service: AppService) {}
 
   ngOnInit() {
-    this.toolsWeb = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.WEB);
-    this.toolsDev = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.DEVELOP);
-    this.toolsDesign = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.DESIGN);
-    this.toolsAgile = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.AGILE);
+    this.service.getData(this.service.getLanguage(), Constants.SECTIONS.TOOLS).subscribe((data: Array<ITTool>) => {
+      this.toolsWeb = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.WEB);
+      this.toolsDev = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.DEVELOP);
+      this.toolsDesign = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.DESIGN);
+      this.toolsAgile = this.service.pfTools.filter(tool => tool.group === Constants.TOOLS.AGILE);
+    });
   }
 
 }

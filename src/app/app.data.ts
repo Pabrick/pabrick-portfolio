@@ -1,5 +1,3 @@
-import { ITTool } from './views/tools/tools.model';
-
 export interface ITSection {
     title: string;
     text?: string;
@@ -12,9 +10,4 @@ export class PortfolioSections {
     experience: ITSection;
     projects: ITSection;
     education: ITSection;
-}
-
-export interface ITPortfolio {
-    sections: PortfolioSections;
-    tools: Array<ITTool>;
 }

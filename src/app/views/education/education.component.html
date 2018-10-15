@@ -1,10 +1,10 @@
-<section class="education" aria-label="education">
+<section class="education" aria-label="education" *ngIf="service.pfTexts">
 
   <div class="wrapper">
 
     <h3>{{ service.pfTexts.education.title }}</h3>
 
-    <div class="education-block">
+    <div class="education-block" *ngIf="service.pfEducation">
 
       <div *ngFor="let edu of service.pfEducation.get('education')" class="study">
         <span class="degree">{{edu.degree}}</span>
@@ -15,7 +15,7 @@
 
     <h3>{{ service.pfTexts.education.subsection }}</h3>
 
-    <div class="languages-block">
+    <div class="languages-block" *ngIf="service.pfEducation">
 
       <div *ngFor="let lang of service.pfEducation.get('languages')" class="language">
         <span class="language-name">{{lang.name}}</span>
