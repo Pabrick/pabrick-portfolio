@@ -1,15 +1,15 @@
 export class TimelineEvent {
-    name: string;
-    type: any;
     dateFrom?: string;
     dateTo: string;
-    position?: string;
     description: string;
-    link?: string;
     featured?: Array<ITFeaturedProject>;
+    link?: string;
+    name: string;
+    position?: string;
+    type: any;
 }
 
 export interface ITFeaturedProject {
-    name: string;
     description: string;
+    name: string;
 }

@@ -3,22 +3,19 @@
 
     <nav class="menu-block">
 
-      <a class="menu-button"
-         routerLink="experience"
+      <a class="menu-btn-experience"
          [ngClass]="service.getSection() === 'experience' ? 'selected' : ''"
          (click)="onClick('experience')">
             {{ service.pfTexts.experience.title }}
       </a>
 
-      <a class="menu-button"
-         routerLink="projects"
+      <a class="menu-btn-projects"
          [ngClass]="service.getSection() === 'projects' ? 'selected' : ''"
          (click)="onClick('projects')">
             {{ service.pfTexts.projects.title }}
       </a>
 
-      <a class="menu-button"
-         routerLink="education"
+      <a class="menu-btn-education"
          [ngClass]="service.getSection() === 'education' ? 'selected' : ''"
          (click)="onClick('education')">
             {{ service.pfTexts.education.title }}

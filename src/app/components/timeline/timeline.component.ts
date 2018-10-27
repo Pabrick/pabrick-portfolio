@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TimelineEvent } from './timeline.data';
+import { TimelineEvent, ITFeaturedProject } from './timeline.data';
 import { ITSection } from '../../app.data';
 
 @Component({

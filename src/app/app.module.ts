@@ -3,39 +3,34 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
+import { HeaderModule } from './views/header/header.module';
+import { FooterModule } from './views/footer/footer.module';
+import { AboutModule } from './views/about/about.module';
+import { ToolsModule } from './views/tools/tools.module';
+import { MenuModule } from './views/menu/menu.module';
+
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './views/header/header.component';
-import { FooterComponent } from './views/footer/footer.component';
-import { AboutComponent } from './views/about/about.component';
-import { ToolsComponent } from './views/tools/tools.component';
-import { MenuComponent } from './views/menu/menu.component';
-
-import { WorkExperienceComponent } from './views/work-experience/work-experience.component';
-import { SideProjectsComponent } from './views/side-projects/side-projects.component';
-import { EducationComponent } from './views/education/education.component';
-
-import { TimelineComponent } from './components/timeline/timeline.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    AboutComponent,
-    ToolsComponent,
-    MenuComponent,
-    WorkExperienceComponent,
-    SideProjectsComponent,
-    TimelineComponent,
-    EducationComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HeaderModule,
+    FooterModule,
+    AboutModule,
+    ToolsModule,
+    MenuModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}], // TODO PathLocationStrategy
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy } // TODO PathLocationStrategy
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

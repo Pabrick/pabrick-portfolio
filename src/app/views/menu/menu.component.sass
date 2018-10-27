@@ -49,8 +49,23 @@
                     &::after
                         border-top: 20px solid $theme-bluegray-300
 
+            .menu-btn-experience,
+            .menu-btn-projects,
+            .menu-btn-education
+                @extend .menu-button
+                
+            .menu-btn-education
+                padding: 26px 20px 29px 20px
+
             .selected
                 background-color: $theme-bluegray-900
                 color: $theme-bluegray-050
                 &::after
                     border-top: 20px solid $theme-bluegray-900
+
+@media screen and (min-width: 582px)
+    .menu
+        .wrapper
+            .menu-block
+                .menu-btn-education
+                    padding: 16px 20px 20px 20px

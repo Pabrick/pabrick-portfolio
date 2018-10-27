@@ -1,25 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WorkExperienceComponent } from './views/work-experience/work-experience.component';
-import { SideProjectsComponent } from './views/side-projects/side-projects.component';
-import { EducationComponent } from './views/education/education.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: WorkExperienceComponent
+    redirectTo: 'experience',
+    pathMatch: 'full'
   },
   {
     path: 'experience',
-    component: WorkExperienceComponent
+    loadChildren: './views/work-experience/work-experience.module#WorkExperienceModule'
   },
   {
     path: 'projects',
-    component: SideProjectsComponent
+    loadChildren: './views/side-projects/side-projects.module#SideProjectsModule'
   },
   {
     path: 'education',
-    component: EducationComponent
+    loadChildren: './views/education/education.module#EducationModule'
   }
 ];
 @NgModule({

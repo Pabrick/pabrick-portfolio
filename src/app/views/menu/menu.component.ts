@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,13 +9,14 @@ import { AppService } from '../../app.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(public service: AppService) {}
+  constructor(public service: AppService, public router: Router) {}
 
   ngOnInit() {
   }
 
   public onClick(sec) {
     this.service.setSection(sec);
+    this.router.navigate([sec]);
   }
 
 }

@@ -6,15 +6,15 @@
             "dateFrom": "Aug. 2017",
             "dateTo": "Present Day",
             "position": "Front-End Developer / Technical Leader",
-            "description": "AngularJS and Angular project development for banking area.",
+            "description": "AngularJS and Angular project development for banking area.\nDeveloping solutions for the migration and new developments of the web portal of one of the most important banks in Spain.",
             "featured": [
                 {
                     "name": "Banco Santander NuevaWebEmpresas:",
-                    "description": "My task is to lead a small team (from 4 to 10 people) and develop the web portal as well as migrate from AngularJS (1.5) to Angular 5, changing its functionality and ‘look & feel’, using full mobile first responsive designs. As Team Leader I have direct communication with the Product Owner to solve any problem that appears."
+                    "description": "Development the web portal as well as migration from AngularJS (1.5) to Angular 5, changing its functionality, ‘look & feel’, full responsive mobile first design.\n My role as one of the team leaders involved:\n- Informing Project Manager about the status.\n- Coordinating Scrum dailies and work.\n- Distributing work around the rest of the team members\n- Mentoring other team members\n- Developing the core parts of our sprint tasks."
                 },
                 {
                     "name": "Banco Santander SAM:",
-                    "description": "As a member of a small team our job was to develop a bank functionality in AngularJS (1.5) to integrate in the client web portal. My duty was to prevent Wordpress to modify our app styles because we were integrating inside an iFrame."
+                    "description": "Development of bank functionality in AngularJS (1.5) to integrate in their web portal. My duty was to develop the styles architecture to avoid the upper iFrame overriding our styles."
                 }
             ]
         },
