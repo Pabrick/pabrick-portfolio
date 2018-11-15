@@ -10,7 +10,7 @@ import { ToolsModule } from './views/tools/tools.module';
 import { MenuModule } from './views/menu/menu.module';
 
 import { AppComponent } from './app.component';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LocationStrategy, HashLocationStrategy, APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     MenuModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy } // TODO PathLocationStrategy
+    { provide: LocationStrategy, useClass: HashLocationStrategy }, // TODO PathLocationStrategy
+    { provide: APP_BASE_HREF, useValue : '/' }
   ],
   bootstrap: [
     AppComponent

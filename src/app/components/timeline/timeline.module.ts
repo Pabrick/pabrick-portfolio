@@ -3,14 +3,8 @@ import { CommonModule } from '@angular/common';
 import { TimelineComponent } from './timeline.component';
 
 @NgModule({
-  declarations: [
-    TimelineComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    TimelineComponent
-  ]
+  declarations: [ TimelineComponent ],
+  imports: [ CommonModule ],
+  exports: [ TimelineComponent ]
 })
 export class TimelineModule { }

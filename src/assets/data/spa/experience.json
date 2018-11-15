@@ -6,11 +6,11 @@
             "dateFrom": "Ago. 2017",
             "dateTo": "Actualidad",
             "position": "Desarrollador Front-End / Líder Técnico",
-            "description": "Desarrollo de proyectos en AngularJS y Angular para el sector bancario.",
+            "description": "Desarrollo de proyectos en AngularJS y Angular para el sector bancario.\nMigraciones y nuevos desarrollos del 'portal web' de uno de los bancos más importantes de España.",
             "featured": [
                 {
                     "name": "Banco Santander NuevaWebEmpresas:",
-                    "description": "Mi tarea es liderar un pequeño equipo (entre 4 y 10 personas) y desarrolla el nuevo web-portal así como migrar desde AngularJS (1.5) a Angular 5, cambiando su funcionalidad y su 'look and fell', aplicando 'first mobile' en un diseño responsivo. Como Líder de Equipo tengo comunicación directa con el Product Owner para reolver cualquier problema que pudiera surgir."
+                    "description": "Desarrollo del 'portal web' así como de su migración de AngularJS (1.5) a Angular 5, cambiar su funcionalidad, 'look & feel' y adaptarlo a un diseño completamente 'responsive' usando diseños 'mobile first'.\nMis tareas como uno de los líderes del equipo incluyen:\n- Informar al 'Project Manager' con status diarios.\n- Coordinar las 'Scrum Dailies' y el trabajo.\n- Distribuir el trabajo entre los miembros del equipo.\n- Ayudar a otros miembros del equipo.\n- Desarrollar las partes clave de nuestras tareas de 'sprint'."
                 },
                 {
                     "name": "Banco Santander SAM:",

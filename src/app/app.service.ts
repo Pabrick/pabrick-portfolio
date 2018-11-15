@@ -28,13 +28,24 @@ export class AppService {
 
     public setLanguage(lang: string) {
         this.lang = lang;
-        this.getData(lang, 'sections').subscribe((data: PortfolioSections) => { this.pfTexts = data; });
-        this.getData(lang, Constants.SECTIONS.TOOLS).subscribe((data: Array<ITTool>) => { this.pfTools = data[Constants.SECTIONS.TOOLS]; });
-        // tslint:disable-next-line:max-line-length
-        this.getData(lang, Constants.SECTIONS.EXPERIENCE).subscribe((data: Array<any>) => { this.pfExperience = data[Constants.SECTIONS.EXPERIENCE]; });
-        // tslint:disable-next-line:max-line-length
-        this.getData(lang, Constants.SECTIONS.PROJECTS).subscribe((data: Array<any>) => { this.pfProjects = data[Constants.SECTIONS.PROJECTS]; });
-        this.getData(lang, Constants.SECTIONS.EDUCATION).subscribe((data: any) => {
+
+        this.getDataLanguage(lang, 'sections').subscribe((data: PortfolioSections) => {
+            this.pfTexts = data;
+        });
+
+        this.getData(Constants.SECTIONS.TOOLS).subscribe((data: Array<ITTool>) => {
+            this.pfTools = data[Constants.SECTIONS.TOOLS];
+        });
+
+        this.getDataLanguage(lang, Constants.SECTIONS.EXPERIENCE).subscribe((data: Array<any>) => {
+            this.pfExperience = data[Constants.SECTIONS.EXPERIENCE];
+        });
+
+        this.getDataLanguage(lang, Constants.SECTIONS.PROJECTS).subscribe((data: Array<any>) => {
+            this.pfProjects = data[Constants.SECTIONS.PROJECTS];
+        });
+
+        this.getDataLanguage(lang, Constants.SECTIONS.EDUCATION).subscribe((data: any) => {
             this.pfEducation = new Map<string, Array<any>>();
             this.pfEducation.set(Constants.SECTIONS.EDUCATION , data[Constants.SECTIONS.EDUCATION]);
             this.pfEducation.set(Constants.SECTIONS.LANGUAGES , data[Constants.SECTIONS.LANGUAGES]);
@@ -53,7 +64,11 @@ export class AppService {
         this.section = sec;
     }
 
-    public getData(lang, section): Observable<any> {
+    public getData(section): Observable<any> {
+        return this.http.get<any>(`../assets/data/${section}.json`);
+    }
+
+    public getDataLanguage(lang, section): Observable<any> {
         return this.http.get<any>(`../assets/data/${lang}/${section}.json`);
     }
 

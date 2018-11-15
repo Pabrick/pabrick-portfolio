@@ -3,14 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about.component';
 
 @NgModule({
-  declarations: [
-    AboutComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    AboutComponent
-  ]
+  declarations: [ AboutComponent ],
+  imports: [ CommonModule ],
+  exports: [ AboutComponent ]
 })
 export class AboutModule { }
