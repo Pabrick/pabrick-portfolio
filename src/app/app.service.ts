@@ -33,10 +33,6 @@ export class AppService {
             this.pfTexts = data;
         });
 
-        this.getData(Constants.SECTIONS.TOOLS).subscribe((data: Array<ITTool>) => {
-            this.pfTools = data[Constants.SECTIONS.TOOLS];
-        });
-
         this.getDataLanguage(lang, Constants.SECTIONS.EXPERIENCE).subscribe((data: Array<any>) => {
             this.pfExperience = data[Constants.SECTIONS.EXPERIENCE];
         });
