@@ -8,11 +8,9 @@ import { Constants } from './app.consts';
 
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class AppService {
-
-    public section: string;
 
     public pfTexts: PortfolioSections;
     public pfTools: Array<ITTool>;
@@ -21,6 +19,7 @@ export class AppService {
     public pfEducation: Map<string, Array<any>>;
 
     private lang: string;
+    private section: string;
 
     constructor (private http: HttpClient) {
         this.setLanguage('eng');

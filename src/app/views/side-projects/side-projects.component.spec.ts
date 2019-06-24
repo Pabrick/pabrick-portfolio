@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SideProjectsComponent } from './side-projects.component';
+import { TimelineComponent } from 'src/app/components/timeline/timeline.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('SideProjectsComponent', () => {
   let component: SideProjectsComponent;
@@ -8,7 +11,11 @@ describe('SideProjectsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SideProjectsComponent ]
+      declarations: [ SideProjectsComponent, TimelineComponent ],
+      imports: [
+        RouterTestingModule,
+        HttpClientModule
+      ]
     })
     .compileComponents();
   }));

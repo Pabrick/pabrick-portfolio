@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkExperienceComponent } from './work-experience.component';
+import { TimelineComponent } from 'src/app/components/timeline/timeline.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('WorkExperienceComponent', () => {
   let component: WorkExperienceComponent;
@@ -8,7 +11,11 @@ describe('WorkExperienceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WorkExperienceComponent ]
+      declarations: [ WorkExperienceComponent, TimelineComponent ],
+      imports: [
+        RouterTestingModule,
+        HttpClientModule
+      ]
     })
     .compileComponents();
   }));

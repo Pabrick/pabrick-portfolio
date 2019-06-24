@@ -1,11 +1,11 @@
 {
     "projects": [
         {
-            "name": "Roger.JS",
+            "name": "@pabrick/roger",
             "type": "Animation library",
             "dateTo": "Jul. 2018",
-            "description": "A personal project made entirely in ECMAScript 6 based in frame by frame animations and spritesheets.",
-            "link": "https://github.com/Pabrick/roger.js"
+            "description": "Personal project made entirely in ECMAScript 6 based in frame by frame animations and sprite sheets.",
+            "link": "https://github.com/Pabrick/roger"
         },
         {
             "name": "QBOX",

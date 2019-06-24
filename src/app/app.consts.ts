@@ -8,7 +8,7 @@ export class Constants {
         LANGUAGES: 'languages'
     };
     public static TOOLS = {
-        WEB: 'web',
+        DEVELOP_CURRENT: 'dev-current',
         DEVELOP: 'dev',
         DESIGN: 'design',
         AGILE: 'agile'

@@ -1,10 +1,24 @@
 {
     "experience": [
         {
+            "name": "Capita",
+            "type": "Employee Solutions",
+            "dateFrom": "Feb. 2019",
+            "dateTo": "Present Day",
+            "position": "Front-End Developer",
+            "description": "Development of Vue and AngularJS platforms for benefits management.",
+            "featured": [
+                {
+                    "name": "ORBIT - Benefits:",
+                    "description": "Development of the new benefits platform in Vue as well as maintenance of the platform in production in AngularJS. As part of the Front-End team my task are developing new functionalities, unit testing, e2e testing and code reviews."
+                }
+            ]
+        },
+        {
             "name": "BSD Enterprise",
             "type": "Technological Consultancy",
             "dateFrom": "Aug. 2017",
-            "dateTo": "Present Day",
+            "dateTo": "Feb. 2019",
             "position": "Front-End Developer / Technical Leader",
             "description": "AngularJS and Angular project development for banking area.\nDeveloping solutions for the migration and new developments of the web portal of one of the most important banks in Spain.",
             "featured": [
